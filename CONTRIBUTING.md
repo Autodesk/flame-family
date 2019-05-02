@@ -1,6 +1,6 @@
-#CONTRIBUTING
+# CONTRIBUTING
 
-##What can I contribute?
+## What can I contribute?
 
 Contributions to this project are encouraged! Here's a list of items you can contribute with:
 
@@ -10,9 +10,9 @@ Contributions to this project are encouraged! Here's a list of items you can con
 * Python API / Custom Actions: Provide python snippets that can be loaded into the python console or files using the Flame Family python hooks. You can also propose modifications to existing files.
 
 
-##Submission Guidelines
+## Submission Guidelines
 
-###Maintainers
+### Maintainers
 
 Maintainers are Autodesk employees responsible for responding to pull requests, issues, and for merging.
 
@@ -21,12 +21,12 @@ Maintainers are Autodesk employees responsible for responding to pull requests, 
 * Frédéric Warren- Maintainer
  
 
-###Timing
+### Timing
 
 We will attempt to address all issues and pull requests as soon as possible. There could be a delay at some period of the year.
 
 
-###Guidelines
+### Guidelines
 
 Please follow these guidelines
 
@@ -35,7 +35,7 @@ Please follow these guidelines
 * Please run your python code through pylint before you submit a pull request to make sure that there are no errors.
  
 
-###Pull Requests
+### Pull Requests
 
 Follow these steps to submit a pull request
 

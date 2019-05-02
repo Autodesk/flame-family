@@ -1,6 +1,6 @@
-#README
+# README
 
-##Please respect the following guidelines as much as possible:
+## Please respect the following guidelines as much as possible:
 
 * Give a meaningful and descriptive name to your file.
 * Respect the folder hierarchy as much as possible, but do not hesitate to create a new folder if needed.
@@ -8,7 +8,7 @@
 * Always add a docstring in your file and explain what it does.
 * Add a minimumVersion and / or maximumVersion properties to all scripts. Please see below for more information.
 
-###Version scoping
+### Version scoping
 
 Version scoping can be added using the 'minimumVersion' and/or 'maximumVersion' properties to an entire script or a particular custom action.
 
