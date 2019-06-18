@@ -4,9 +4,6 @@
 
 Contributions to this project are encouraged! Here's a list of items you can contribute with:
 
-* Matchbox shaders: Submit new Matchbox shaders or propose improvements to existing ones.
-* Lightbox shaders: Submit new Lightbox shaders or propose improvements to existing ones.
-* Pybox: Submit new Pybox handlers or propose improvements to existing ones.
 * Python API / Custom Actions: Provide python snippets that can be loaded into the python console or files using the Flame Family python hooks. You can also propose modifications to existing files.
 
 
