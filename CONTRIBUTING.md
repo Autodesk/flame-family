@@ -37,9 +37,13 @@ Please follow these guidelines
 Follow these steps to submit a pull request
 
 * Search GitHub for an open or closed Pull Request that relates to your submission. You don't want to duplicate effort.
-* Make your changes in a new git branch using git checkout -b my-branch
-* Make your changes in that git branch.
-* Commit your changes using a descriptive commit message. Note: the optional commit -a command line option will automatically "add" and "rm" edited files.
-* Push your branch to GitHub using git push origin my-branch
-* In GitHub, send a pull request to the maintainers for review.
+* Clone the flame-family repository to your machine using the green button at the top right of the Code tab. This will create a local copy of the repository on your machine.
+* Create a new branch using git checkout origin/master -b <my-branch-name>.
+* Make your changes in that git branch. Ususally, you will simply need to copy your script in the proper directory and then execute git add <name of your file>.
+* Commit your changes using git commit -a. Add a descriptive commit message. Note: the commit -a command line option will automatically "add" and "rm" edited files.
+* Push your branch to GitHub using git push origin <my-branch-name>.
+* In GitHub, create a pull request for your commit so the maintainers can review it.
+ 1. Go to the Code tab
+ 2. Click on Branch
+ 3. Click on New Pull Request Next to your branch.
 * Once approved, your pull request will be merged by one of the maintainers.
