@@ -7,7 +7,7 @@ def get_media_panel_custom_ui_actions():
         """Scope the custom action to the Desktop."""
         import flame
         for item in selection:
-            if isinstance(item, (flame.PyDesktop)):
+            if isinstance(item, flame.PyDesktop):
                 return True
         return False
 
@@ -15,7 +15,7 @@ def get_media_panel_custom_ui_actions():
         """Scope the custom action to the Batch Groups."""
         import flame
         for item in selection:
-            if isinstance(item, (flame.PyBatch)):
+            if isinstance(item, flame.PyBatch):
                 return True
         return False
 
@@ -23,7 +23,7 @@ def get_media_panel_custom_ui_actions():
         """Scope the custom action to the Librariess."""
         import flame
         for item in selection:
-            if isinstance(item, (flame.PyLibrary)):
+            if isinstance(item, flame.PyLibrary):
                 return True
         return False
 
@@ -31,7 +31,7 @@ def get_media_panel_custom_ui_actions():
         """Scope the custom action to the Folders."""
         import flame
         for item in selection:
-            if isinstance(item, (flame.PyFolder)):
+            if isinstance(item, flame.PyFolder):
                 return True
         return False
 
