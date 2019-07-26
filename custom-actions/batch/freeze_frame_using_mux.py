@@ -6,22 +6,29 @@ def get_batch_custom_ui_actions():
     def get_context():
         """Get the first available slot in a Batch Group's Context views list."""
         import flame
+
         contexts = flame.batch.contexts
-        for context in range(1, 11):
-            if contexts.has_key(context) is False:
+        first_context_slot = 1
+        last_context_slot = 10
+
+        for context in range(first_context_slot, last_context_slot + 1):
+            if not contexts.has_key(context):
                 return context
-        return 0
+        return None
 
     def scope_node(selection):
         """Scope the custom action to the nodes residing in a Batch Schematic."""
         import flame
         for item in selection:
-            if isinstance(item, (flame.PyNode)):
+            if isinstance(item, flame.PyNode):
                 return True
         return False
 
     def add_mux_and_freeze(selection):
         """Add a MUX node and freeze the current frame"""
+
+        del selection # Unused
+
         import flame
 
         current = flame.batch.current_node.get_value()
@@ -32,12 +39,12 @@ def get_batch_custom_ui_actions():
         mux.pos_x = current.pos_x + 200
         mux.pos_y = current.pos_y
         context_nb = get_context()
-        if context_nb is not 0:
+        if context_nb is not None:
             mux.set_context(context_nb, "Result")
         mux.range_active = True
         mux.range_start = time
         mux.range_end = time
-        mux.before_range = "Repeat First" 
+        mux.before_range = "Repeat First"
         mux.after_range = "Repeat Last"
 
         # Connect the Result output socket to the MUX's Front socket
@@ -53,7 +60,7 @@ def get_batch_custom_ui_actions():
             socket_number = socket_number + 1
 
     return [
-         {
+        {
             "name": "Custom",
             "actions": [
                 {
