@@ -1,16 +1,14 @@
-#Creates a Dated Folder
+"""Creates a Dated Folder in the Library"""
 def get_media_panel_custom_ui_actions():
 
     def scope_libraries(selection):
         import flame
         for item in selection:
-            if isinstance(item, (flame.PyLibrary)):
+            if isinstance(item, flame.PyLibrary):
                 return True
         return False
 
     def dated_folder(selection):
-        import flame
-        import os
         import datetime
         date = datetime.date.today().strftime('%Y_%m_%d')
 
