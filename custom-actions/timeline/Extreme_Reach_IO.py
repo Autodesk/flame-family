@@ -1,10 +1,10 @@
-#Script to set in and out points in a timeline based on the Extreme Reach delivery specs.
+"""Script to set in and out points in a timeline based on the Extreme Reach delivery specs.""""
 def get_media_panel_custom_ui_actions():
 
     def scope_clip(selection):
         import flame
         for item in selection:
-            if isinstance(item, (flame.PyClip)):
+            if isinstance(item, flame.PyClip):
                 return True
         return False
 
