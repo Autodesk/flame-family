@@ -8,51 +8,28 @@ def get_media_panel_custom_ui_actions():
                 return True
         return False
 
+    def set_selection_in_out_marks(selection, tc_in, tc_out):
+    import flame
+    for sequence in selection:
+        i = sequence.duration.frame
+        frameRate = sequence.frame_rate
+        sequence.in_mark = flame.PyTime(tc_in, frameRate)
+        sequence.out_mark = flame.PyTime(tc_out, frameRate)
+
     def er_io_60(selection):
-        import flame
-        for sequence in selection:
-            frameRate = sequence.frame_rate
-            tc_IN = flame.PyTime("00:59:53:00", frameRate)
-            tc_OUT = flame.PyTime("01:01:00:01", frameRate)
-            sequence.in_mark = tc_IN
-            sequence.out_mark = tc_OUT
+        set_selection_in_out_marks(selection, in="00:59:53:00", out="01:01:00:01")
 
     def er_io_30(selection):
-        import flame
-        for sequence in selection:
-            frameRate = sequence.frame_rate
-            tc_IN = flame.PyTime("00:59:53:00", frameRate)
-            tc_OUT = flame.PyTime("01:00:30:01", frameRate)
-            sequence.in_mark = tc_IN
-            sequence.out_mark = tc_OUT
+        set_selection_in_out_marks(selection, in="00:59:53:00", out="01:01:00:01")
 
     def er_io_20(selection):
-        import flame
-        for sequence in selection:
-            frameRate = sequence.frame_rate
-            tc_IN = flame.PyTime("00:59:53:00", frameRate)
-            tc_OUT = flame.PyTime("01:00:20:01", frameRate)
-            sequence.in_mark = tc_IN
-            sequence.out_mark = tc_OUT
+        set_selection_in_out_marks(selection, in="00:59:53:00",  out="01:0020:01")
 
     def er_io_15(selection):
-        import flame
-        for sequence in selection:
-            frameRate = sequence.frame_rate
-            tc_IN = flame.PyTime("00:59:53:00", frameRate)
-            tc_OUT = flame.PyTime("01:00:15:01", frameRate)
-            sequence.in_mark = tc_IN
-            sequence.out_mark = tc_OUT
+        set_selection_in_out_marks(selection, in="00:59:53:00",  out="01:00:15:01")
 
     def er_io_10(selection):
-        import flame
-        for sequence in selection:
-            frameRate = sequence.frame_rate
-            tc_IN = flame.PyTime("00:59:53:00", frameRate)
-            tc_OUT = flame.PyTime("01:00:10:01", frameRate)
-            sequence.in_mark = tc_IN
-            sequence.out_mark = tc_OUT
-
+        set_selection_in_out_marks(selection, in="00:59:53:00",  out="01:00:10:01")
 
     return [
         {
